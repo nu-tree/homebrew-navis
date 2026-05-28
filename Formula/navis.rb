@@ -11,7 +11,7 @@ class Navis < Formula
   desc "Personal Claude-powered REPL (Discord/CLI bridge with namory memory)"
   homepage "https://github.com/nu-tree/navis"
   url "https://github.com/nu-tree/navis/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "56cfb60051d11d9be593b16397b1df591ad5afb8e3b7074aaf43c54d82fc6cc3"
+  sha256 "9a62f701b9ce1e0581148391bcad21b1a1cb148136bb1911e50244c76df406bb"
   license "MIT"
   head "https://github.com/nu-tree/navis.git", branch: "main"
 
@@ -45,10 +45,6 @@ class Navis < Formula
         NAMORY_MCP_URL=https://<your-namory-host>/mcp
         NAMORY_TOKEN=...
         SYSTEM_PROMPT=\\\`당신은 사용자 전용 비서 '나비스'입니다 ...\\\`
-
-        # 디스코드 모드도 같이 쓸 거면 추가:
-        DISCORD_TOKEN=...
-        ALLOWED_USER_IDS=...
 
         # 선택(노션/구글 등)도 같은 파일에.
         EOF
