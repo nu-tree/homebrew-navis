@@ -10,8 +10,8 @@
 class Navis < Formula
   desc "Personal Claude-powered REPL (Discord/CLI bridge with namory memory)"
   homepage "https://github.com/nu-tree/navis"
-  url "https://github.com/nu-tree/navis/archive/refs/tags/v0.1.1.tar.gz"
-  sha256 "9a62f701b9ce1e0581148391bcad21b1a1cb148136bb1911e50244c76df406bb"
+  url "https://github.com/nu-tree/navis/archive/refs/tags/v0.1.2.tar.gz"
+  sha256 "03a87d8f521092026b2b2829f35c65e401cff6de6f960fc3fe63c2cd4f278326"
   license "MIT"
   head "https://github.com/nu-tree/navis.git", branch: "main"
 
@@ -27,10 +27,10 @@ class Navis < Formula
       libexec.install "dist", "node_modules", "package.json"
     end
 
-    # 진입 래퍼: brew node 의 절대경로로 dist/bin.js 실행.
+    # 진입 래퍼: brew node 의 절대경로로 dist/cli.js 실행.
     (bin/"navis").write <<~SCRIPT
       #!/bin/bash
-      exec "#{Formula["node"].opt_bin}/node" "#{libexec}/dist/bin.js" "$@"
+      exec "#{Formula["node"].opt_bin}/node" "#{libexec}/dist/cli.js" "$@"
     SCRIPT
     (bin/"navis").chmod 0755
   end
