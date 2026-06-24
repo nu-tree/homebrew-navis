@@ -10,8 +10,8 @@
 class Navis < Formula
   desc "Personal Claude-powered REPL (Discord/CLI bridge with namory memory)"
   homepage "https://github.com/nu-tree/navis"
-  url "https://github.com/nu-tree/navis/archive/refs/tags/v0.1.4.tar.gz"
-  sha256 "34dab3c44e028842d3b12fed16bd811f5de241a614fd5710cb4025d8f395d95e"
+  url "https://github.com/nu-tree/navis/archive/refs/tags/v0.1.5.tar.gz"
+  sha256 "3a160c163ccf6ea067489d8bf49c03936811e44caa69cb598f5bcce1696f30ae"
   license "MIT"
   head "https://github.com/nu-tree/navis.git", branch: "main"
 
