@@ -10,8 +10,8 @@
 class Navis < Formula
   desc "Personal Claude-powered REPL (Discord/CLI bridge with namory memory)"
   homepage "https://github.com/nu-tree/navis"
-  url "https://github.com/nu-tree/navis/archive/refs/tags/v0.1.5.tar.gz"
-  sha256 "3a160c163ccf6ea067489d8bf49c03936811e44caa69cb598f5bcce1696f30ae"
+  url "https://github.com/nu-tree/navis/archive/refs/tags/v0.1.6.tar.gz"
+  sha256 "c2e4adde85ef44c1d20bb8f91638681e8e359a671e008df3febf5399d94f2fcf"
   license "MIT"
   head "https://github.com/nu-tree/navis.git", branch: "main"
 
@@ -20,7 +20,7 @@ class Navis < Formula
   def install
     # 모노레포 내 packages/navis 만 빌드. pnpm-lock 은 루트에 있지만 npm 으로 단독 설치
     # 가능(workspace-internal 의존성 없음). --no-package-lock 으로 pnpm 락과 충돌 회피.
-    cd "packages/navis" do
+    cd "packages/navis-cli" do
       system "npm", "install", "--no-package-lock", "--include=dev"
       system "npm", "run", "build"
       system "npm", "prune", "--omit=dev"   # 런타임 의존성만 남김(이미지 슬림화)
